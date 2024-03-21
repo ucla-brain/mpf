@@ -1,0 +1,32 @@
+Metalines: 11
+Project Name: SW110606-01A
+Case Name: SW110606-01A
+Slide Number: 1_06
+Channel Number: 5
+ARA Level: 010
+Tracer: CTB-647 pixel count
+Injection Site: None
+Atlas Name: ARA
+Atlas Version: 1
+Overlap Format: Region
+(HEMISPHERE:R:G:B), ATLAS ONLY, OVERLAP, REGION
+(l:130:199:172), 2130998, 0, MOB_gr
+(l:130:199:173), 348443, 0, MOB_mi
+(l:130:199:174), 2229594, 0, MOB_gl
+(l:130:199:175), 1957778, 0, MOB_opl
+(l:130:199:176), 476826, 0, MOB_ipl
+(l:154:210:189), 75, 0, border9
+(l:170:170:170), 45842, 0, rc/sez
+(l:191:218:227), 11, 0, BORDER0
+(l:204:204:204), 1771529, 0, onl
+(l:255:255:255), 72043176, 0, BORDER6
+(r:130:199:172), 2130998, 0, MOB_gr
+(r:130:199:173), 348443, 0, MOB_mi
+(r:130:199:174), 2229594, 0, MOB_gl
+(r:130:199:175), 1957778, 0, MOB_opl
+(r:130:199:176), 476826, 0, MOB_ipl
+(r:154:210:189), 75, 0, border9
+(r:170:170:170), 45842, 0, rc/sez
+(r:191:218:227), 11, 0, BORDER0
+(r:204:204:204), 1771529, 0, onl
+(r:255:255:255), 72043176, 0, BORDER6
