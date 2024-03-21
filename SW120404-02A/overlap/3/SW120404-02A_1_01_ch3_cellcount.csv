@@ -1,0 +1,36 @@
+Metalines: 11
+Project Name: SW120404-02A
+Case Name: SW120404-02A
+Slide Number: 1_01
+Channel Number: 3
+ARA Level: 014
+Tracer: FG pixel count
+Injection Site: PL_2/3
+Atlas Name: ARA
+Atlas Version: 1
+Overlap Format: Region
+(HEMISPHERE:R:G:B), ATLAS ONLY, OVERLAP, REGION
+(l:130:199:172), 2257424, 0, MOB_gr
+(l:130:199:173), 438804, 0, MOB_mi
+(l:130:199:174), 2212114, 0, MOB_gl
+(l:130:199:175), 2171847, 0, MOB_opl
+(l:130:199:176), 479814, 0, MOB_ipl
+(l:154:210:189), 3203, 0, border9
+(l:157:240:207), 136643, 0, AOB_gr
+(l:170:170:170), 86165, 0, rc/sez
+(l:191:218:227), 189, 0, BORDER0
+(l:204:204:204), 1075925, 0, onl
+(l:204:204:207), 230257, 0, aco
+(l:255:255:255), 71911887, 0, BORDER6
+(r:130:199:172), 2257424, 0, MOB_gr
+(r:130:199:173), 438804, 0, MOB_mi
+(r:130:199:174), 2212114, 0, MOB_gl
+(r:130:199:175), 2171847, 0, MOB_opl
+(r:130:199:176), 479814, 0, MOB_ipl
+(r:154:210:189), 3203, 0, border9
+(r:157:240:207), 136643, 0, AOB_gr
+(r:170:170:170), 86165, 0, rc/sez
+(r:191:218:227), 189, 0, BORDER0
+(r:204:204:204), 1075925, 0, onl
+(r:204:204:207), 230257, 0, aco
+(r:255:255:255), 71911887, 0, BORDER6
