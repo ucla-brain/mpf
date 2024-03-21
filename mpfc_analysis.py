@@ -13,7 +13,7 @@ from tracer_analysis import TracerAnalysis
 case_sheet = pd.read_csv('case_sheet.csv', dtype={'channel': str}).set_index(['case_id', 'channel'])
 
 
-def get_connectivities():
+def get_connectivities(is_anterograde=True):
     overlap_dirs = []
     for case_id, channel in case_sheet.index:
         print(case_id, channel)
@@ -21,11 +21,11 @@ def get_connectivities():
         assert os.path.isdir(overlap_dir)
         overlap_dirs.append(overlap_dir)
     builder = TracerConnectivityBuilder(overlap_dirs, injection_site_roi_mapper=case_sheet['injection_site_coarse'].to_dict())
-    connectivities = [tracer_connectivity for tracer_connectivity in builder.tracer_connectivities if tracer_connectivity.anterograde]
+    connectivities = [tracer_connectivity for tracer_connectivity in builder.tracer_connectivities if tracer_connectivity.anterograde==is_anterograde]
     return connectivities
 
 
-def plot_data(data_type='fraction'):
+def plot_data(analysis, data_type='fraction'):
     # Global 2d cluster heatmap
     analysis.select_data()
     analysis.cluster_2d(data_type, threshold_quantile=0.975, vis_ceil_val=0.1, title='all')
@@ -47,21 +47,15 @@ def plot_data(data_type='fraction'):
         analysis.cluster_2d('fraction', threshold_quantile=0.85, vis_ceil_val=0.1, title=roi_group)
 
 
-def main()
-
-
 if __name__ == '__main__':
-    cs = get_connectivities(os.getcwd())
-    analysis = TracerAnalysis(cs)
-    analysis.set_analysis_name('mpfc-analysis')
-    analysis.set_output_dir(os.path.join(os.getcwd(), 'plots'))
+    antero_analysis = TracerAnalysis(get_connectivities(is_anterograde=True))
+    antero_analysis.set_analysis_name('mpfc-antero-analysis')
+    antero_analysis.set_output_dir(os.path.join(os.getcwd(), 'plots'))
+    plot_data(antero_analysis)
 
-    analysis.select_data(roi_group_names='CTX_COARSE', roi_aggregate_rule='CTX_COARSE')
-    communities = analysis.community_detection('density')
-    print(communities)
-    from collections import defaultdict
-    d = defaultdict(list)
-    for name, cid in communities.iteritems():
-        d[cid].append(name)
-    for cid in d:
-        print(cid, d[cid])
+    retro_analysis = TracerAnalysis(get_connectivities(is_anterograde=False))
+    retro_analysis.set_analysis_name('mpfc-antero-analysis')
+    retro_analysis.set_output_dir(os.path.join(os.getcwd(), 'plots'))
+    plot_data(retro_analysis)
+
+    
