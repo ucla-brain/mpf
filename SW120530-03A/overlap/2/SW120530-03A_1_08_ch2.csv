@@ -1,0 +1,36 @@
+Metalines: 11
+Project Name: SW120530-03A
+Case Name: SW120530-03A
+Slide Number: 1_08
+Channel Number: 2
+ARA Level: 013
+Tracer: PHAL
+Injection Site: PL_2/3
+Atlas Name: ARA
+Atlas Version: 1
+Overlap Format: Region
+(HEMISPHERE:R:G:B), ATLAS ONLY, OVERLAP, REGION
+(l:130:199:172), 2157226, 140, MOB_gr
+(l:130:199:173), 392357, 64, MOB_mi
+(l:130:199:174), 2225959, 0, MOB_gl
+(l:130:199:175), 2161257, 236, MOB_opl
+(l:130:199:176), 497907, 188, MOB_ipl
+(l:154:210:189), 6917, 0, border9
+(l:170:170:170), 87568, 0, rc/sez
+(l:176:255:184), 3430, 0, BORDER1
+(l:191:218:227), 13, 0, BORDER0
+(l:204:204:204), 1256396, 0, onl
+(l:204:204:207), 256634, 0, aco
+(l:255:255:255), 71957980, 0, BORDER6
+(r:130:199:172), 2157353, 13, MOB_gr
+(r:130:199:173), 392410, 11, MOB_mi
+(r:130:199:174), 2225959, 0, MOB_gl
+(r:130:199:175), 2161224, 269, MOB_opl
+(r:130:199:176), 498094, 1, MOB_ipl
+(r:154:210:189), 6917, 0, border9
+(r:170:170:170), 87568, 0, rc/sez
+(r:176:255:184), 3430, 0, BORDER1
+(r:191:218:227), 13, 0, BORDER0
+(r:204:204:204), 1256396, 0, onl
+(r:204:204:207), 256634, 0, aco
+(r:255:255:255), 71957980, 0, BORDER6
