@@ -44,7 +44,7 @@ def plot_data(analysis, data_type='fraction'):
     for roi_group, roi_mapping in [('GLOBAL_HIERARCHY', 'GLOBAL_HIERARCHY'), ('CTX_DS', 'CTX_DS'),
                                    ('SENSORY_CTX_DS', 'SENSORY_CTX_DS')]:
         analysis.select_data(roi_group_names=roi_group, roi_aggregate_rule=roi_mapping, case_aggregate_rule='combine_series')
-        analysis.cluster_2d('fraction', threshold_quantile=0.85, vis_ceil_val=0.1, title=roi_group)
+        analysis.cluster_2d(data_type, threshold_quantile=0.85, vis_ceil_val=0.1, title=roi_group)
 
 
 if __name__ == '__main__':
