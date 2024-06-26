@@ -41,8 +41,7 @@ def plot_data(analysis, data_type='fraction'):
         analysis.plot_data_scatter(data_type)
 
     # ROI group 2d cluster heatmap
-    for roi_group, roi_mapping in [('GLOBAL_HIERARCHY', 'GLOBAL_HIERARCHY'), ('CTX_DS', 'CTX_DS'),
-                                   ('SENSORY_CTX_DS', 'SENSORY_CTX_DS')]:
+    for roi_group, roi_mapping in [('GLOBAL_HIERARCHY', 'GLOBAL_HIERARCHY'), ('CTX_DS', 'CTX_DS')]:
         analysis.select_data(roi_group_names=roi_group, roi_aggregate_rule=roi_mapping, case_aggregate_rule='combine_series')
         analysis.cluster_2d(data_type, threshold_quantile=0.85, vis_ceil_val=0.1, title=roi_group)
 
