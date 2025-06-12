@@ -8,7 +8,6 @@ import cv2
 from translate_colors import TranslateColors
 from translate_colors import UnknownCustomAtlasError
 from roi_info import ROIInfo, INDEX2ROI
-from path_spector import PathSpector
 
 
 class AtlasAssetType(enum.Enum):
@@ -57,10 +56,7 @@ class AtlasAssetType(enum.Enum):
         asset_dir = self.asset_dir(custom_atlas=custom_atlas)
         asset_name = self.asset_name(custom_atlas=custom_atlas, level=level)
         ret_path = os.path.join(asset_dir, asset_name)
-        if local:
-            return PathSpector.normalize_path_to_os(ret_path)
-        else:
-            return ret_path
+        return ret_path
 
 
 class CustomAtlasConfig:

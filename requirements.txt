@@ -1,0 +1,10 @@
+ipython
+ipykernel
+numpy
+seaborn
+pandas
+matplotlib
+scipy
+opencv-python
+networkx
+community

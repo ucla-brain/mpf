@@ -1,15 +1,17 @@
 import os
 import sys
+# import anlaysis, visualization, and roi, tracer, connectivity quantification
+#  newer version of pandas does not allow set as indexer
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-# import outspector modules
 from roi_groups import GLOBAL_COARSE_MAPPING, HY_COARSE_MAPPING, ROI_GROUPS, ROI_MAPPINGS, GLOBAL_HIERARCHY_MAPPING
 from roi_info import INDEX2ROI
 from tracer_connectivity import TracerConnectivityBuilder
 from tracer_analysis import TracerAnalysis
 
 
+# csv file references mouse brain cases, trailing commas removed
 case_sheet = pd.read_csv('case_sheet.csv', dtype={'channel': str}).set_index(['case_id', 'channel'])
 
 

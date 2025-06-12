@@ -200,7 +200,7 @@ class TracerAnalysis:
             raise ValueError('data selection should have been performed by _merge_case_tracers')
         selected_roi_names = self._selected_roi_names()
         for data_type in ['count', 'area', 'fraction']:
-            self.selected_data[data_type] = self.selected_data[data_type].loc[:, selected_roi_names]
+            self.selected_data[data_type] = self.selected_data[data_type].loc[:, list(selected_roi_names)]
             # merge roi
             if self.selection_parameters.roi_aggregate_rule is not None:
                 if isinstance(self.selection_parameters.roi_aggregate_rule, str):
